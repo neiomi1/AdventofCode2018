@@ -3,3 +3,9 @@ E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/CMakeFiles/rebuild_ca
 E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_01/CMakeFiles/Day_01.dir
 E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_01/CMakeFiles/edit_cache.dir
 E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_01/CMakeFiles/rebuild_cache.dir
+E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_02/CMakeFiles/edit_cache.dir
+E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_02/CMakeFiles/Day_02.dir
+E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_02/CMakeFiles/rebuild_cache.dir
+E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_03/CMakeFiles/Day_03.dir
+E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_03/CMakeFiles/edit_cache.dir
+E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_03/CMakeFiles/rebuild_cache.dir

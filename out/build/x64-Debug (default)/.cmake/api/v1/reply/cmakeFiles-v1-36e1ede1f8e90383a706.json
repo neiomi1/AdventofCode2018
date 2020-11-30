@@ -122,6 +122,12 @@
 		},
 		{
 			"path" : "Day_01/CMakeLists.txt"
+		},
+		{
+			"path" : "Day_02/CMakeLists.txt"
+		},
+		{
+			"path" : "Day_03/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

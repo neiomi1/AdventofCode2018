@@ -72,7 +72,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 build cmake_object_order_depends_target_Day_01_Debug: phony || Day_01\CMakeFiles\Day_01.dir
 
 build Day_01\CMakeFiles\Day_01.dir\Day_01.cpp.obj: CXX_COMPILER__Day_01_Debug ..\..\..\Day_01\Day_01.cpp || cmake_object_order_depends_target_Day_01_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++17
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest
   OBJECT_DIR = Day_01\CMakeFiles\Day_01.dir
   OBJECT_FILE_DIR = Day_01\CMakeFiles\Day_01.dir
   TARGET_COMPILE_PDB = Day_01\CMakeFiles\Day_01.dir\
@@ -122,11 +122,147 @@ build Day_01\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 build Day_01\rebuild_cache: phony Day_01\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Projects/AdventofCode2018/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build Day_02\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "E:\Projects\AdventofCode2018\out\build\x64-Debug (default)\Day_02" && "E:\Program Files (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Day_02\edit_cache: phony Day_02\CMakeFiles\edit_cache.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Day_02
+
+
+#############################################
+# Order-only phony target for Day_02
+
+build cmake_object_order_depends_target_Day_02_Debug: phony || Day_02\CMakeFiles\Day_02.dir
+
+build Day_02\CMakeFiles\Day_02.dir\Day_02.cpp.obj: CXX_COMPILER__Day_02_Debug ..\..\..\Day_02\Day_02.cpp || cmake_object_order_depends_target_Day_02_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest
+  OBJECT_DIR = Day_02\CMakeFiles\Day_02.dir
+  OBJECT_FILE_DIR = Day_02\CMakeFiles\Day_02.dir
+  TARGET_COMPILE_PDB = Day_02\CMakeFiles\Day_02.dir\
+  TARGET_PDB = Day_02\Day_02.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Day_02
+
+
+#############################################
+# Link the executable Day_02\Day_02.exe
+
+build Day_02\Day_02.exe: CXX_EXECUTABLE_LINKER__Day_02_Debug Day_02\CMakeFiles\Day_02.dir\Day_02.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = Day_02\CMakeFiles\Day_02.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = Day_02\CMakeFiles\Day_02.dir\
+  TARGET_FILE = Day_02\Day_02.exe
+  TARGET_IMPLIB = Day_02\Day_02.lib
+  TARGET_PDB = Day_02\Day_02.pdb
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Day_02\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "E:\Projects\AdventofCode2018\out\build\x64-Debug (default)\Day_02" && "E:\Program Files (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SE:\Projects\AdventofCode2018 -B"E:\Projects\AdventofCode2018\out\build\x64-Debug (default)""
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Day_02\rebuild_cache: phony Day_02\CMakeFiles\rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Projects/AdventofCode2018/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Day_03
+
+
+#############################################
+# Order-only phony target for Day_03
+
+build cmake_object_order_depends_target_Day_03_Debug: phony || Day_03\CMakeFiles\Day_03.dir
+
+build Day_03\CMakeFiles\Day_03.dir\Day_03.cpp.obj: CXX_COMPILER__Day_03_Debug ..\..\..\Day_03\Day_03.cpp || cmake_object_order_depends_target_Day_03_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest
+  OBJECT_DIR = Day_03\CMakeFiles\Day_03.dir
+  OBJECT_FILE_DIR = Day_03\CMakeFiles\Day_03.dir
+  TARGET_COMPILE_PDB = Day_03\CMakeFiles\Day_03.dir\
+  TARGET_PDB = Day_03\Day_03.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Day_03
+
+
+#############################################
+# Link the executable Day_03\Day_03.exe
+
+build Day_03\Day_03.exe: CXX_EXECUTABLE_LINKER__Day_03_Debug Day_03\CMakeFiles\Day_03.dir\Day_03.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = Day_03\CMakeFiles\Day_03.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = Day_03\CMakeFiles\Day_03.dir\
+  TARGET_FILE = Day_03\Day_03.exe
+  TARGET_IMPLIB = Day_03\Day_03.lib
+  TARGET_PDB = Day_03\Day_03.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build Day_03\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "E:\Projects\AdventofCode2018\out\build\x64-Debug (default)\Day_03" && "E:\Program Files (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Day_03\edit_cache: phony Day_03\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Day_03\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "E:\Projects\AdventofCode2018\out\build\x64-Debug (default)\Day_03" && "E:\Program Files (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SE:\Projects\AdventofCode2018 -B"E:\Projects\AdventofCode2018\out\build\x64-Debug (default)""
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Day_03\rebuild_cache: phony Day_03\CMakeFiles\rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build Day_01: phony Day_01\Day_01.exe
 
 build Day_01.exe: phony Day_01\Day_01.exe
+
+build Day_02: phony Day_02\Day_02.exe
+
+build Day_02.exe: phony Day_02\Day_02.exe
+
+build Day_03: phony Day_03\Day_03.exe
+
+build Day_03.exe: phony Day_03\Day_03.exe
 
 # =============================================================================
 # Folder targets.
@@ -136,7 +272,7 @@ build Day_01.exe: phony Day_01\Day_01.exe
 #############################################
 # Folder: E:/Projects/AdventofCode2018/out/build/x64-Debug (default)
 
-build all: phony Day_01\all
+build all: phony Day_01\all Day_02\all Day_03\all
 
 # =============================================================================
 
@@ -146,20 +282,34 @@ build all: phony Day_01\all
 build Day_01\all: phony Day_01\Day_01.exe
 
 # =============================================================================
+
+#############################################
+# Folder: E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_02
+
+build Day_02\all: phony Day_02\Day_02.exe
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Projects/AdventofCode2018/out/build/x64-Debug (default)/Day_03
+
+build Day_03\all: phony Day_03\Day_03.exe
+
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\Day_01\CMakeLists.txt CMakeCache.txt CMakeFiles\3.17.20032601-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeSystem.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\Day_01\CMakeLists.txt ..\..\..\Day_02\CMakeLists.txt ..\..\..\Day_03\CMakeLists.txt CMakeCache.txt CMakeFiles\3.17.20032601-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeSystem.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\..\..\CMakeLists.txt ..\..\..\Day_01\CMakeLists.txt CMakeCache.txt CMakeFiles\3.17.20032601-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeSystem.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake: phony
+build ..\..\..\CMakeLists.txt ..\..\..\Day_01\CMakeLists.txt ..\..\..\Day_02\CMakeLists.txt ..\..\..\Day_03\CMakeLists.txt CMakeCache.txt CMakeFiles\3.17.20032601-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.17.20032601-MSVC_2\CMakeSystem.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake E$:\Program$ Files$ (x86)\VisualStudioEnterprise2019\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake: phony
 
 
 #############################################

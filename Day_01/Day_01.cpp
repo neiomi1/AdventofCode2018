@@ -1,7 +1,4 @@
-﻿// Day_01.cpp : Defines the entry point for the application.
-//
-
-#include "Day_01.h"
+﻿#include "Day_01.h"
 #include <fstream>
 #include <filesystem>
 #include <iostream>
@@ -53,7 +50,7 @@ int first_frequency(){
 
 int main()
 {
-	//std::cout << "Current path is " << fs::current_path() << '\n';
+	std::cout << "Current path is " << fs::current_path() << '\n';
 	std::cout << "Final Frequency: " << final_frequency() << "\n";
 	std::cout << "First Duplicate: " << first_frequency() << "\n";
 
