@@ -12,7 +12,7 @@
 					],
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.10"
 					},
 					"projectIndex" : 0,
 					"source" : "."
@@ -21,7 +21,7 @@
 					"build" : "Day_01",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.10"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -53,7 +53,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "Day_01::@d19c65b8bb15e0d1006f",
-					"jsonFile" : "target-Day_01-Debug-cfe4f80c6560f0dc9c28.json",
+					"jsonFile" : "target-Day_01-Debug-0d27448c172bae1e0190.json",
 					"name" : "Day_01",
 					"projectIndex" : 0
 				}
