@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+**/out/*
+input.txt
+
 # User-specific files
 *.rsuser
 *.suo
@@ -337,4 +340,4 @@ ASALocalRun/
 .localhistory/
 
 # BeatPulse healthcheck temp database
-healthchecksdb
+healthchecksdbout
