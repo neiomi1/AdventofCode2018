@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include <functional>
+#include <tuple>
 // TODO: Reference additional headers your program requires here.
 
 
@@ -13,41 +14,61 @@
 struct Date{
 	int year = 0;
 	int month = 0;
-	int Day = 0;
+	int day = 0;
 
-	inline bool operator > (const Date& date)const {
-		if (this->year == date.year) {
-			if (this->month == date.month) {
-				return this->Day > date.Day;
-			}
-			return this->month > date.month;
+
+	Date nextDay() {
+		Date temp = *this;
+		temp.day++;
+		switch (temp.month) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+			temp.day = (temp.day > 31) ? 1 : temp.day;
+			temp.month = (day == 1) ? temp.month + 1 : temp.month;
+			break;
+		case 2: temp.day = (temp.day > 28) ? 1 : temp.day;
+			temp.month = (day == 1) ? temp.month + 1 : temp.month;
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			temp.day = (temp.day > 30) ? 1 : temp.day;
+			temp.month = (day == 1) ? temp.month + 1 : temp.month;
+			break;
+		case 12: temp.day = (temp.day > 31) ? 1 : temp.day;
+			temp.month = (day == 1) ? 1 : temp.month;
+			temp.year = (temp.month == 1) ? temp.year++ : temp.year;
+			break;
 		}
-		return this->year > date.year;
+		return temp;
 	}
 
-	inline bool operator < (const Date& date)const {
-		if (this->year == date.year) {
-			if (this->month == date.month) {
-				return this->Day < date.Day;
-			}
-			return this->month < date.month;
-		}
-		return this->year < date.year;
+	bool operator > (const Date& date)const {
+		return std::tie(year, month, day) > std::tie(date.year, date.month, date.day);
 	}
 
-	inline bool operator == (const Date& date)const {
-		return (*this > date || *this < date);
+	bool operator < (const Date& date)const {
+		return std::tie(year, month, day) < std::tie(date.year, date.month, date.day);
 	}
 
-	inline bool operator <= (const Date& date)const {
+	bool operator == (const Date& date)const {
+		return !(*this > date || *this < date);
+	}
+
+	bool operator <= (const Date& date)const {
 		return !(*this > date);
 	}
 
-	inline bool operator >= (const Date& date)const {
+	bool operator >= (const Date& date)const {
 		return !(*this < date);
 	}
 
-	inline bool operator != (const Date& date)const {
+	bool operator != (const Date& date)const {
 		return !(*this == date);
 	}
 };
@@ -56,34 +77,28 @@ struct Time {
 	int hours = 0;
 	int minutes = 0;
 
-	inline bool operator > (const Time& time)const {
-		if (this->hours == time.hours) {
-			return this->minutes > time.minutes;
-		}
-		return this->hours > time.hours;
+	bool operator > (const Time& time)const {
+		return std::tie(hours, minutes) > std::tie(time.hours, time.minutes);
 	}
 
-	inline bool operator < (const Time& time)const {
-		if (this->hours == time.hours) {
-			return this->minutes < time.minutes;
-		}
-		return this->hours < time.hours;
+	bool operator < (const Time& time)const {
+		return std::tie(hours, minutes) < std::tie(time.hours, time.minutes);
 	}
 
-	inline bool operator == (const Time& time) const {
-		return (*this > time || *this < time);
+	bool operator == (const Time& time) const {
+		return !(*this > time || *this < time);
 	
 	}
 
-	inline bool operator >= (const Time& time)const {
+	bool operator >= (const Time& time)const {
 		return !(*this < time);
 	}
 
-	inline bool operator <= (const Time& time)const {
+	bool operator <= (const Time& time)const {
 		return !(*this > time);
 	}
 
-	inline bool operator != (const Time& time)const {
+	bool operator != (const Time& time)const {
 		return !(*this == time);
 	}
 
@@ -93,33 +108,27 @@ struct DateTime {
 	Date date = Date{};
 	Time time = Time{};
 
-	inline bool operator > (const DateTime& datetime)const {
-		if (this->date == datetime.date) {
-			return this->time > datetime.time;
-		}
-		return this->date > datetime.date;
+	bool operator > (const DateTime& datetime)const {
+		return std::tie(date, time) > std::tie(datetime.date, datetime.time);
 	}
 
-	inline bool operator < (const DateTime& datetime)const {
-		if (this->date == datetime.date) {
-			return this->time < datetime.time;
-		}
-		return this->date < datetime.date;
+	bool operator < (const DateTime& datetime)const {
+		return std::tie(date, time) < std::tie(datetime.date, datetime.time);
 	}
 
-	inline bool operator == (const DateTime& datetime)const {
-		return (*this > datetime || *this < datetime);
+	bool operator == (const DateTime& datetime)const {
+		return !(*this > datetime || *this < datetime);
 	}
 
-	inline bool operator >= (const DateTime& datetime)const {
+	bool operator >= (const DateTime& datetime)const {
 		return !(*this < datetime);
 	}
 
-	inline bool operator <= (const DateTime& datetime)const {
+	bool operator <= (const DateTime& datetime)const {
 		return !(*this > datetime);
 	}
 
-	inline bool operator != (const DateTime& datetime)const {
+	bool operator != (const DateTime& datetime)const {
 		return !(*this == datetime);
 	}
 };
@@ -132,7 +141,7 @@ namespace std {
 	template<>
 	struct hash<Date> {
 		inline size_t operator()(const Date& date) const {
-			int temp = date.year * 10000 + date.Day + date.month * 100;
+			int temp = date.year * 10000 + date.day + date.month * 100;
 			size_t result = std::hash<int>{}(temp);
 			//size_t result = std::hash<int>{}(date.year) ^ (std::hash<int>{}(date.month) << 1) ^ (std::hash<int>{}(date.Day) << 1);
 			return result;
