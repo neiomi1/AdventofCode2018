@@ -44,7 +44,7 @@ void parse_guards(std::vector<DateTime>& entries, std::unordered_map<DateTime, s
 	char c;
 	for (auto& entry : entries) {
 		const auto& message = logs[entry];
-		std::cout << message+"\n";
+		//std::cout << message+"\n";
 		if (message.find("Guard") != std::string::npos) {
 			auto stream = std::istringstream{ message };
 			stream >> str >> c >> guard_id;
@@ -59,9 +59,10 @@ void parse_guards(std::vector<DateTime>& entries, std::unordered_map<DateTime, s
 			sleep_minute = entry.time.minutes;
 		}
 		else {
-			for(sleep_minute; sleep_minute < entry.time.minutes; sleep_minute++)
-			sleep_logs[guard_id][sleep_minute]++;
-			guard_sleep_minutes[guard_id]++;
+			for (sleep_minute; sleep_minute < entry.time.minutes; sleep_minute++) {
+				sleep_logs[guard_id][sleep_minute]++;
+				guard_sleep_minutes[guard_id]++;
+			}
 		}
 	}
 }
@@ -70,6 +71,7 @@ int part_one(std::unordered_map<int, int>& guard_sleep_minutes, std::unordered_m
 	int max = 0;
 	int sleepy_guard_id;
 	for (const auto& [guard_id, minutes] : guard_sleep_minutes) {
+		//std::cout << "Guard #" << guard_id << " slept " << minutes << " minutes \n";
 		if (minutes > max) {
 			sleepy_guard_id = guard_id;
 			max = minutes;
@@ -78,15 +80,33 @@ int part_one(std::unordered_map<int, int>& guard_sleep_minutes, std::unordered_m
 	int most_sleepy_minute = 0;
 	max = 0;
 	for (const auto& [minute, amount] : sleep_logs[sleepy_guard_id]) {
+		//std::cout << minute << " : " << amount << "\n";
 		if (amount > max) {
 			max = amount;
 			most_sleepy_minute = minute;
 		}
 	}
-	std::cout << "Guard #" << sleepy_guard_id << " slept the most at minute " << most_sleepy_minute << "\n";
+	//std::cout << "Guard #" << sleepy_guard_id << " slept the most at minute " << most_sleepy_minute << "\n";
 	return most_sleepy_minute * sleepy_guard_id;
 }
 
+
+int part_two(std::unordered_map<int, std::map<int, int>>& sleep_logs) {
+	int max = 0;
+	int sleepy_guard = 0;
+	int sleepy_minute = 0;
+	for (const auto& [guard_id, sleep_map] : sleep_logs) {
+		for (const auto& [minute, amount] : sleep_map) {
+			if (amount > max) {
+				max = amount;
+				sleepy_minute = minute;
+				sleepy_guard = guard_id;
+			}
+		}
+	}
+	std::cout << "Guard #" << sleepy_guard << " slept " << max << " times at minute " << sleepy_minute << "\n";
+	return sleepy_guard * sleepy_minute;
+}
 
 int main()
 {
@@ -98,6 +118,7 @@ int main()
 
 	auto file_time = std::ofstream{ "../../../../Day_04/execution_times.txt" };
 	auto file = std::ofstream{ "../../../../Day_04/parsed.txt" };
+	auto file_sleep = std::ofstream{ "../../../../Day_04/guards_sleep.txt" };
 
 	
 	auto start = std::chrono::high_resolution_clock::now();
@@ -121,6 +142,22 @@ int main()
 	file_time << "Part one done in: " << duration.count() << " microseconds.\n";
 
 	std::cout << "Part one: " << answer_part_one << "\n";
+
+
+
+	start = std::chrono::high_resolution_clock::now();
+	int answer_part_two = part_two(sleep_logs);
+	stop = std::chrono::high_resolution_clock::now();
+	duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+	file_time << "Part two done in: " << duration.count() << " microseconds.\n";
+
+	std::cout << "Part two: " << answer_part_two << "\n";
+
+	for (const auto& [guard_id, m_map] : sleep_logs) {
+		for (const auto& [minute, amount] : m_map) {
+			file_sleep << guard_id << "  " << minute << "  " << amount << "\n";
+		}
+	}
 
 	for (const auto& entry : entries) {
 		auto message = logs[entry];

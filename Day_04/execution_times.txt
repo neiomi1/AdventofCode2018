@@ -1,3 +1,4 @@
-Input read in 44121 microseconds.
-Guards parsed in: 78447 microseconds.
-Part one done in: 236 microseconds.
+Input read in 44138 microseconds.
+Guards parsed in: 10135 microseconds.
+Part one done in: 7 microseconds.
+Part two done in: 398 microseconds.
