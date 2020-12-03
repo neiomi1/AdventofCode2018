@@ -39,6 +39,7 @@ int first_frequency(){
 			resultFile << "looping\n";
 			file.clear();
 			file.seekg(0, std::ios::beg);
+			
 		}
 		file >> current;
 		frequency += current;
