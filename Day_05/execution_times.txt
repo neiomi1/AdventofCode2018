@@ -1,0 +1,2 @@
+Input read in 14583 microseconds.
+Reduced in: 2423382 microseconds.
